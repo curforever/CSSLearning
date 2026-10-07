@@ -56,3 +56,6 @@ input:checked[type="checkbox"]:after{
     left: 105px;
     box-shadow: 0 0 5px #13b3ff, 0 0 15px #13b3ff;
 }
+input[type="checkbox"]:focus-visible{outline:2px solid #80d8ff;outline-offset:8px}
+
+@media(prefers-reduced-motion:reduce){*,::before,::after{animation:none!important;transition:none!important}}

@@ -22,7 +22,7 @@ main{
 }
 
 ul{
-    width: 500px;
+    width: min(500px, calc(100vw - 40px));
 }
 
 li{
@@ -115,3 +115,15 @@ li:after{
     }
 }
 
+
+.js::after{width:90%}
+
+.react::after{width:80%}
+
+.html5::after{width:60%}
+
+.css3::after{width:75%}
+
+.sketch::after{width:99%}
+
+@media(prefers-reduced-motion:reduce){*,::before,::after{animation:none!important;transition:none!important}}

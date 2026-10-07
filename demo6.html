@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN" class="light-theme">
 <head>
     <meta charset="UTF-8">
 <!--    兼容IE8-->
@@ -10,7 +10,7 @@
 <!--    maximum-scale和minimum-scale用于设置用户对于Web页面缩放比例的限制。值的范围为0.25~10.0之间-->
 <!--    user-scalable指定用户是否可以缩放视区，即缩放Web页面的视图。值为yes时允许用户进行缩放，值为no时不允许缩放。-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/style6.css">
+    <link rel="stylesheet" href="static/style6.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!--    背景色主题src-->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
@@ -22,7 +22,7 @@
     <div class="menu-header">
         <h2 class="menu-header-title">Theme</h2>
         <div class="theme-switcher">
-            <input type="radio" name="themes" id="light-theme">
+            <input type="radio" name="themes" id="light-theme" checked>
             <label for="light-theme">
                 <ion-icon name="sunny-outline"></ion-icon>
                 <span>Light</span>
@@ -50,7 +50,7 @@
 <script>
     let html=document.getElementsByTagName('html')
     let radios=document.getElementsByName('themes')
-    for(i=0; i<radios.length; i++) {
+    for(let i=0; i<radios.length; i++) {
         radios[i].addEventListener('change', function (){
             html[0].classList.remove(html[0].classList.item(0))
             html[0].classList.add(this.id)

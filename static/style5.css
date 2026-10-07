@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 *{
     margin: 0;
@@ -15,14 +15,14 @@ body{
 }
 .card{
     position: relative;
-    width: 350px;
+    width: min(350px, calc(100vw - 32px));
     height: 190px;
     background: #fff;
     border-radius: 20px;
     box-shadow: 0 35px 80px rgba(0,0,0,.15);
     transition: 0.5s;
 }
-.card:hover{
+.card:is(:hover,:focus-within){
     height: 450px;
 }
 .imgBx{
@@ -38,7 +38,7 @@ body{
     overflow: hidden;
     transition: 0.5s;
 }
-.card:hover .imgBx{
+.card:is(:hover,:focus-within) .imgBx{
     width: 250px;
     height: 250px;
     border-radius: 20px;
@@ -68,7 +68,7 @@ body{
     transform: translateY(150px);
     overflow: hidden;
 }
-.card:hover .content .details{
+.card:is(:hover,:focus-within) .content .details{
     padding: 40px;
     text-align: center;
     width: 100%;
@@ -98,7 +98,7 @@ body{
     line-height: 1.2em;
     font-weight: 600;
 }
-.card .content .details .data h3 data{
+.card .content .details .data h3 span{
     font-size: 0.85em;
     font-weight: 400;
     opacity: 0.5;
@@ -125,3 +125,7 @@ body{
     background: #fff;
 }
 
+
+.actionBtn button:focus-visible{outline:3px solid #7c3aed;outline-offset:3px}
+
+@media(prefers-reduced-motion:reduce){*,::before,::after{animation:none!important;transition:none!important}}

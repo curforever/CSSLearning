@@ -1,5 +1,5 @@
 *{
-    magin: 0;
+    margin: 0;
     padding: 0;
     list-style: none;
 }
@@ -58,56 +58,60 @@ ul li:nth-child(5):before{
 }
 
 /*设置 选中时 图标外圈的颜色*/
-ul li:nth-child(1):hover:before{
+ul li:nth-child(1):is(:hover,:focus-visible):before{
     filter:blur(4px);
-    box-shadow:0 0 15 #0A82ED;
+    box-shadow:0 0 15px #0A82ED;
     transform:scale(1.2);
 }
-ul li:nth-child(2):hover:before{
+ul li:nth-child(2):is(:hover,:focus-visible):before{
     filter:blur(4px);
-    box-shadow:0 0 15 #04A2FFB3;
+    box-shadow:0 0 15px #04A2FFB3;
     transform:scale(1.2);
 }
-ul li:nth-child(3):hover:before{
+ul li:nth-child(3):is(:hover,:focus-visible):before{
     filter:blur(4px);
-    box-shadow:0 0 15 #E23670;
+    box-shadow:0 0 15px #E23670;
     transform:scale(1.2);
 }
-ul li:nth-child(4):hover:before{
+ul li:nth-child(4):is(:hover,:focus-visible):before{
     filter:blur(4px);
-    box-shadow:0 0 15 #2A6CBB;
+    box-shadow:0 0 15px #2A6CBB;
     transform:scale(1.2);
 }
-ul li:nth-child(5):hover:before{
+ul li:nth-child(5):is(:hover,:focus-visible):before{
     filter:blur(4px);
-    box-shadow:0 0 15 #FF1A1A;
+    box-shadow:0 0 15px #FF1A1A;
     transform:scale(1.2);
 }
 
 /*设置 选中时 图标镂空的颜色*/
-ul li:nth-child(1):hover{
+ul li:nth-child(1):is(:hover,:focus-visible){
     color: #0A82ED;
     box-shadow: 0 0 15px #0A82ED;
     text-shadow: 0 0 15px #0A82ED;
 }
-ul li:nth-child(2):hover{
+ul li:nth-child(2):is(:hover,:focus-visible){
     color: #04A2FFB3;
     box-shadow: 0 0 15px #04A2FFB3;
     text-shadow: 0 0 15px #04A2FFB3;
 }
-ul li:nth-child(3):hover{
+ul li:nth-child(3):is(:hover,:focus-visible){
     color: #E23670;
     box-shadow: 0 0 15px #E23670;
     text-shadow: 0 0 15px #E23670;
 }
-ul li:nth-child(4):hover{
+ul li:nth-child(4):is(:hover,:focus-visible){
     color: #2A6CBB;
     box-shadow: 0 0 15px #2A6CBB;
     text-shadow: 0 0 15px #2A6CBB;
 }
-ul li:nth-child(5):hover{
+ul li:nth-child(5):is(:hover,:focus-visible){
     color: #FF1A1A;
     box-shadow: 0 0 15px #FF1A1A;
     text-shadow: 0 0 15px #FF1A1A;
 }
 
+
+ul{flex-wrap:wrap;justify-content:center;max-width:calc(100vw - 32px);gap:16px}ul li:focus-visible{outline:2px solid currentColor;outline-offset:5px}
+
+@media(prefers-reduced-motion:reduce){*,::before,::after{animation:none!important;transition:none!important}}
